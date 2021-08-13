@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "434928121796",
+    "project_id": "app-distribution-test-2",
+    "storage_bucket": "app-distribution-test-2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:434928121796:android:dfe00b0858c9bd1594d691",
+        "android_client_info": {
+          "package_name": "com.squall.testappdistribution"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "434928121796-hs0jtcpmm48ltqfr1imtnk7ge04vb8ca.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC66gd59Qbk2ni8aBiyU8GRUfHX6rKqlQg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "434928121796-hs0jtcpmm48ltqfr1imtnk7ge04vb8ca.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
