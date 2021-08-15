@@ -8,6 +8,10 @@ plugins {
 android {
     compileSdk 31
 
+    def keystorePropertiesFile = rootProject.file("C:\\Users\\user\\Downloads\\KeyStore.properties")
+    def keystoreProperties = new Properties()
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
     defaultConfig {
         applicationId "com.squall.testappdistribution"
         minSdk 21
@@ -16,6 +20,15 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
     }
 
     buildTypes {
@@ -32,6 +45,9 @@ android {
                 releaseNotes=" 更新了 xxx 功能 "
                 groups="qa-team"
             }
+
+            signingConfig signingConfigs.release
+
         }
         debug{
             firebaseAppDistribution {
